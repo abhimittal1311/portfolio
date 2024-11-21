@@ -296,7 +296,7 @@ const projects = [
       },
     ],
     image: portfolio,
-    repo: '',
+    repo: 'https://github.com/abhimittal1311/portfolio.git',
     demo: '',
   },
 ];
