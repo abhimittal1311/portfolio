@@ -11,7 +11,7 @@ import {
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/portfolio">
       <div className="relative z-0">
         <div>
           <Navbar />
