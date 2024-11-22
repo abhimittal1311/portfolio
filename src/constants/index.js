@@ -170,7 +170,7 @@ const experiences = [
     title: 'Software Engineer Intern',
     company_name: 'Kabera Global Technologies Pvt Ltd',
     icon: kabera,
-    iconBg: '#ffffff',
+    iconBg: '#333333',
     date: 'May 2019 - Aug 2019',
   },
   {
@@ -251,7 +251,7 @@ const projects = [
       },
     ],
     image: facemask,
-    repo: '',
+    repo: 'https://github.com/abhimittal1311/face_mask_detection.git',
     demo: '',
   },
   {

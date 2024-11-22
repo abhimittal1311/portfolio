@@ -14,14 +14,34 @@ const Contact = () => {
     message: '',
   });
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({});
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (!form.name.trim()) newErrors.name = 'Name is required.';
+    if (!form.email.trim()) {
+      newErrors.email = 'Email is required.';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+      newErrors.email = 'Invalid email address.';
+    }
+    if (!form.message.trim()) newErrors.message = 'Message is required.';
+    return newErrors;
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm({ ...form, [name]: value });
+    setErrors({ ...errors, [name]: '' }); // Clear error for the current field
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const validationErrors = validateForm();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+
     setLoading(true);
 
     emailjs
@@ -77,6 +97,9 @@ const Contact = () => {
               placeholder="What should I call you?"
               className="bg-eerieBlack py-4 px-6 placeholder:text-taupe text-timberWolf rounded-lg outline-none border-none font-medium"
             />
+            {errors.name && (
+              <span className="text-red-500 text-sm mt-2">{errors.name}</span>
+            )}
           </label>
           <label className="flex flex-col">
             <span className="text-timberWolf font-medium mb-4">Your Email</span>
@@ -88,6 +111,9 @@ const Contact = () => {
               placeholder="Where can I reach you?"
               className="bg-eerieBlack py-4 px-6 placeholder:text-taupe text-timberWolf rounded-lg outline-none border-none font-medium"
             />
+            {errors.email && (
+              <span className="text-red-500 text-sm mt-2">{errors.email}</span>
+            )}
           </label>
           <label className="flex flex-col">
             <span className="text-timberWolf font-medium mb-4">Your Message</span>
@@ -99,17 +125,14 @@ const Contact = () => {
               placeholder="What should we talk about?"
               className="bg-eerieBlack py-4 px-6 placeholder:text-taupe text-timberWolf rounded-lg outline-none border-none font-medium resize-none"
             />
+            {errors.message && (
+              <span className="text-red-500 text-sm mt-2">{errors.message}</span>
+            )}
           </label>
 
           <button
             type="submit"
-            className="live-demo flex justify-center sm:gap-4 gap-3 sm:text-[20px] text-[16px] text-timberWolf font-bold font-beckman items-center py-5 whitespace-nowrap sm:w-[130px] sm:h-[50px] w-[100px] h-[45px] rounded-[10px] bg-night hover:bg-battleGray hover:text-eerieBlack transition duration-[0.2s] ease-in-out"
-            onMouseOver={() => {
-              document.querySelector('.contact-btn').setAttribute('src', sendHover);
-            }}
-            onMouseOut={() => {
-              document.querySelector('.contact-btn').setAttribute('src', send);
-            }}>
+            className="live-demo flex justify-center sm:gap-4 gap-3 sm:text-[20px] text-[16px] text-timberWolf font-bold font-beckman items-center py-5 whitespace-nowrap sm:w-[130px] sm:h-[50px] w-[100px] h-[45px] rounded-[10px] bg-night hover:bg-battleGray hover:text-eerieBlack transition duration-[0.2s] ease-in-out">
             {loading ? 'Sending' : 'Send'}
             <img
               src={send}

@@ -31,6 +31,7 @@ const ServiceCard = ({ index, title, icon }) => {
 const About = () => {
   return (
     <div className="-mt-[6rem]">
+      {/* Introduction Section */}
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
@@ -49,7 +50,15 @@ const About = () => {
         life a bit more multilingual?
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10">
+      {/* Services Heading */}
+      <motion.div variants={textVariant()} className="mt-16">
+        <p className={`${styles.sectionSubText} text-taupe`}>
+          Some of my core competencies are
+        </p>
+      </motion.div>
+
+      {/* Service Cards */}
+      <div className="mt-10 flex flex-wrap gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
@@ -59,3 +68,5 @@ const About = () => {
 };
 
 export default SectionWrapper(About, 'about');
+
+

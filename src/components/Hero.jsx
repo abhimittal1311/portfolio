@@ -51,7 +51,7 @@ const Hero = () => {
               </span>
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-eerieBlack`}>
-              A Software Engineer based out of Montréal, Canada. 
+              A Software Engineer based out of Montréal, Canada.
             </p>
           </motion.div>
           
@@ -85,15 +85,21 @@ const Hero = () => {
           </a>
         </div>
 
-        <div>
-          <img
-            className="absolute bottom-0 ml-[50vw] 
+        {/* Fade-in from right effect for the photo with smoother transition */}
+        <motion.img
+          initial={{ opacity: 0, x: 400 }}  // Start further to the right
+          animate={{ opacity: 1, x: 0 }}    // End at its normal position
+          transition={{
+            duration: 2,                    // Increased duration for smoother effect
+            ease: [0.42, 0, 0.58, 1],       // Ease-in-out for a smooth start and stop
+            type: 'tween',                  // Ensures no bounce, smooth linear transition
+          }}
+          className="absolute bottom-0 ml-[50vw] 
             lg:ml-[75vw] md:ml-[60vw] xmd:ml-[60vw] 2xl:ml-[83vw]
             sm:h-[90vh] md:h-[70vh] xl:h-[80vh]"
-            src={myPhoto}
-            alt="abhishek"
-          />
-        </div>
+          src={myPhoto}
+          alt="abhishek"
+        />
       </section>
     </>
   );
