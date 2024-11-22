@@ -186,7 +186,7 @@ const experiences = [
 const projects = [
   {
     id: 'project-1',
-    name: 'Plagiarism Detection',
+    name: 'Plagiarism Detector',
     description:
       'A program that detects if two source codes or text files are plagiarised.',
     tags: [
@@ -234,7 +234,7 @@ const projects = [
   
   {
     id: 'project-3',
-    name: 'Face Mask Detection',
+    name: 'AI Mask Detector',
     description: 'An AI model trained to detect if a person is wearing a face mask, are they wearing it correctly, and what type of mask are they wearing.',
     tags: [
       {
