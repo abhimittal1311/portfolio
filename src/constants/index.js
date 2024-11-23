@@ -186,7 +186,7 @@ const experiences = [
 const projects = [
   {
     id: 'project-1',
-    name: 'Plagiarism Detector',
+    name: 'Plag Detector',
     description:
       'A program that detects if two source codes or text files are plagiarised.',
     tags: [
