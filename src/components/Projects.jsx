@@ -20,8 +20,13 @@ const ProjectCard = ({
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleDemoClick = () => {
-    // Show the modal when the button is clicked
-    setIsModalOpen(true);
+    if (demo) {
+      // Open live demo link directly if present
+      window.open(demo, '_blank');
+    } else {
+      // Otherwise, show the modal
+      setIsModalOpen(true);
+    }
   };
 
   const closeModal = () => {
@@ -130,11 +135,19 @@ const ProjectCard = ({
 
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
-          <div className="bg-[#1a1a1a] p-8 rounded-[16px] w-[400px]">
-            <h2 className="text-xl font-bold text-center mb-4 text-white">
-              Live Demo
-            </h2>
+        <div
+          className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50"
+          onClick={closeModal} // Close modal when clicking on background
+        >
+          <motion.div
+            initial={{ scale: 0.5, opacity: 0 }}
+            animate={{ scale: 1.05, opacity: 1, transition: { duration: 0.15, ease: 'easeOut' } }}
+            exit={{ scale: 0.8, opacity: 0 }}
+            transition={{ duration: 0.15, ease: 'easeInOut' }}
+            onClick={(e) => e.stopPropagation()} // Prevent closing modal on content click
+            className="bg-[#1a1a1a] p-8 rounded-[16px] w-[400px] shadow-lg"
+          >
+            <h2 className="text-xl font-bold text-center mb-4 text-white">Live Demo</h2>
             <p className="text-center mb-4 text-white">
               The live demo will be available soon. Stay tuned!
             </p>
@@ -146,7 +159,7 @@ const ProjectCard = ({
                 Close
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       )}
     </>

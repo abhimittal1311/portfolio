@@ -15,6 +15,9 @@ const Contact = () => {
   });
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState({});
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalMessage, setModalMessage] = useState('');
+  const [hovered, setHovered] = useState(false); // State for hovering effect
 
   const validateForm = () => {
     const newErrors = {};
@@ -46,8 +49,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        'service_u2t7adk',
-        'template_6dr3ram',
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: 'Abhishek Mittal',
@@ -55,12 +58,13 @@ const Contact = () => {
           to_email: 'amittal1311@gmail.com',
           message: form.message,
         },
-        'lfnj56muLI_DhrXyU'
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
           setLoading(false);
-          alert('Thank you. I will get back to you as soon as possible.');
+          setModalMessage('Thank you. I will get back to you as soon as possible.');
+          setModalOpen(true);
           setForm({
             name: '',
             email: '',
@@ -70,9 +74,14 @@ const Contact = () => {
         (error) => {
           setLoading(false);
           console.log(error);
-          alert('Something went wrong. Please try again.');
+          setModalMessage('Something went wrong. Please try again.');
+          setModalOpen(true);
         }
       );
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
   };
 
   return (
@@ -132,10 +141,12 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="live-demo flex justify-center sm:gap-4 gap-3 sm:text-[20px] text-[16px] text-timberWolf font-bold font-beckman items-center py-5 whitespace-nowrap sm:w-[130px] sm:h-[50px] w-[100px] h-[45px] rounded-[10px] bg-night hover:bg-battleGray hover:text-eerieBlack transition duration-[0.2s] ease-in-out">
+            className="live-demo flex justify-center sm:gap-4 gap-3 sm:text-[20px] text-[16px] text-timberWolf font-bold font-beckman items-center py-5 whitespace-nowrap sm:w-[130px] sm:h-[50px] w-[100px] h-[45px] rounded-[10px] bg-night hover:bg-battleGray hover:text-eerieBlack transition duration-[0.2s] ease-in-out"
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}>
             {loading ? 'Sending' : 'Send'}
             <img
-              src={send}
+              src={hovered ? sendHover : send}
               alt="send"
               className="contact-btn sm:w-[26px] sm:h-[26px] w-[23px] h-[23px] object-contain"
             />
@@ -170,6 +181,21 @@ const Contact = () => {
           </div>
         </div>
       </motion.div>
+
+      {/* Modal */}
+      {modalOpen && (
+        <div className="modal-overlay flex justify-center items-center fixed inset-0 bg-black bg-opacity-50 z-50">
+          <div className="modal-content bg-eerieBlack p-6 rounded-xl max-w-sm">
+            <p className="text-timberWolf text-xl text-center">{modalMessage}</p>
+            <button
+              className="modal-close mt-4 w-full text-white text-lg bg-night py-2 rounded-lg"
+              onClick={closeModal}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
