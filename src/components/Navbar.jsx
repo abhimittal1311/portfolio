@@ -25,8 +25,6 @@ const Navbar = () => {
             className="sm:w-[50px] sm:h-[50px] w-[45px] h-[45px] object-contain"
           />
         </Link>
-
-        {/* Desktop Menu */}
         <ul className="list-none hidden sm:flex flex-row gap-14 mt-2">
           {navLinks.map((nav) => (
             <li
@@ -34,19 +32,21 @@ const Navbar = () => {
               className={`${
                 active === nav.title ? 'text-french' : 'text-eerieBlack'
               } hover:text-taupe text-[21px] font-medium font-mova 
-                uppercase tracking-[3px] cursor-pointer`}
-              onClick={() => setActive(nav.title)}>
-              <a href={`#${nav.id}`}>{nav.title}</a>
+                uppercase tracking-[3px] cursor-pointer text-center`}>
+              <a
+                href={`#${nav.id}`}
+                onClick={() => setActive(nav.title)}
+                className="block">{nav.title}</a>
             </li>
           ))}
         </ul>
 
-        {/* Mobile Menu */}
+        {/* Mobile menu */}
         <div className="sm:hidden flex flex-1 w-screen justify-end items-center">
           {toggle ? (
             <div
               className={`p-6 bg-flashWhite opacity-[0.98] absolute 
-                top-0 left-0 w-screen h-screen z-10 menu`}>
+                top-0 left-0 w-screen h-[100vh] z-10 menu ${toggle ? 'menu-open' : 'menu-close'}`}>
               <div className="flex justify-end">
                 <img
                   src={close}
@@ -55,19 +55,20 @@ const Navbar = () => {
                   onClick={() => setToggle(!toggle)}
                 />
               </div>
-              <ul className="list-none flex flex-col items-center gap-8 mt-[10vh]">
+              <ul
+                className="list-none flex flex-col gap-4 items-center justify-center mt-[10rem]">
                 {navLinks.map((nav) => (
                   <li
-                    id={nav.id}
                     key={nav.id}
                     className={`${
                       active === nav.title ? 'text-french' : 'text-eerieBlack'
-                    } text-[28px] font-bold font-arenq uppercase tracking-[1px] cursor-pointer`}
+                    } text-[30px] font-bold font-arenq 
+                      uppercase tracking-[1px] cursor-pointer text-center`}
                     onClick={() => {
                       setToggle(!toggle);
                       setActive(nav.title);
                     }}>
-                    <a href={`#${nav.id}`}>{nav.title}</a>
+                    <a href={`#${nav.id}`} className="block">{nav.title}</a>
                   </li>
                 ))}
               </ul>
