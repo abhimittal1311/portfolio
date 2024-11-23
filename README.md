@@ -27,8 +27,8 @@ The portfolio is designed with the user in mind, and several features were incor
 - **Responsive Design**: The layout is fully responsive, ensuring the website looks great and remains functional across all devices, including mobile, tablet, and desktop.
 - **Smooth Animations**: I have integrated **framer-motion** to add smooth transitions and hover effects, making the portfolio more dynamic and engaging for the user.
 - **Interactive Components**: The portfolio includes interactive elements such as:
-  - A **3D rotating ball** showcasing my skills and projects.
-  - A **project showcase** where users can explore the details of each project I’ve worked on.
+  - A **3D rotating ball** showcasing my skills and technologies I am proficient in.
+  - A **project showcase** where users can explore the details of some of the projects I’ve worked on.
   - **Hover effects** and **scroll animations** to provide a more immersive experience.
 - **Clean and Minimal Design**: I focused on a **minimalist design**, prioritizing clarity, simplicity, and usability to make navigation intuitive while also presenting my work effectively.
 
