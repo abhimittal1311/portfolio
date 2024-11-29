@@ -44,7 +44,7 @@ const Hero = () => {
             <h1
               className={`${styles.heroHeadText} text-eerieBlack font-poppins `}>
               <Typewriter
-                words={['Hi, I am', 'Bonjour, C\'est', 'नमस्ते, मैं हूं', 'Hola, Soy', 'Ciao, Lo Sono', ]}
+                words={['Hi, I am', 'Bonjour, c\'est', 'नमस्ते, मैं हूं', 'Hola, soy', 'Ciao, lo sono', ]}
                 loop
                 cursor
                 cursorStyle="_"
