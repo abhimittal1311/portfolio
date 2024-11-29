@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { styles } from '../styles';
 import { navLinks } from '../constants';
 import { myPhoto, bwmap, worldmap } from '../assets';
+import { Typewriter } from 'react-simple-typewriter';
 
 const Hero = () => {
   return (
@@ -42,7 +43,16 @@ const Hero = () => {
           >
             <h1
               className={`${styles.heroHeadText} text-eerieBlack font-poppins `}>
-              Hi, I'm{' '}
+              <Typewriter
+                words={['Hi, I am', 'Bonjour, C\'est', 'नमस्ते, मैं हूं', 'Hola, Soy', 'Ciao, Lo Sono', ]}
+                loop
+                cursor
+                cursorStyle="_"
+                typeSpeed={50}
+                deleteSpeed={50}
+                delaySpeed={1000}
+              />
+              <br />
               <span
                 className="sm:text-battleGray sm:text-[90px] 
                 text-eerieBlack text-[50px] font-mova
