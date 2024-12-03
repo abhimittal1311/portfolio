@@ -7,7 +7,6 @@ import 'react-vertical-timeline-component/style.min.css';
 import { styles } from '../styles';
 import { experiences } from '../constants';
 import { SectionWrapper } from '../hoc';
-import { download, downloadHover, resume , resumeDoc} from '../assets';
 import { textVariant } from '../utils/motion';
 
 const ExperienceCard = ({ experience }) => (
@@ -43,7 +42,7 @@ const ExperienceCard = ({ experience }) => (
         {experience.title}
       </h3>
       <p
-        className="text-taupe text-[22px] font-semibold font-overcameBold tracking-[1px]"
+        className="text-taupe text-[22px] font-semibold font-beckman tracking-[1px]"
         style={{ margin: 0 }}>
         {experience.company_name}
       </p>

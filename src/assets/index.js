@@ -38,6 +38,7 @@ import nodejs from './tech/nodejs.png';
 import reactjs from './tech/reactjs.png';
 import postgresql from './tech/postgresql.png';
 
+import mifi from './company/mifi.png';
 import indemand from './company/indemand_logo.png';
 import concordia from './company/concordia_logo.png';
 import rubiq from './company/rubiq_logo.png';
@@ -103,4 +104,5 @@ export {
   plagiarism,
   facemask,
   college,
+  mifi,
 };

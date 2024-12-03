@@ -28,6 +28,7 @@ import {
   plagiarism,
   facemask,
   college,
+  mifi,
 } from '../assets';
 
 export const navLinks = [
@@ -139,8 +140,15 @@ const technologies = [
 
 const experiences = [
   {
+    title: 'Études de langue française',
+    company_name: 'Ministère de l\'Immigration, de la Francisation et de l\'Intégration',
+    icon: mifi,
+    iconBg: '#ffffff',
+    date: 'Apr 2024 - Present',
+  },
+  {
     title: 'Software Developer Intern',
-    company_name: 'Indemand Care Healthy Inc',
+    company_name: 'Indemand Care Healthy Inc.',
     icon: indemand,
     iconBg: '#ffffff',
     date: 'Aug 2023 - Dec 2023',
@@ -154,21 +162,21 @@ const experiences = [
   },
   {
     title: 'Software Engineer',
-    company_name: 'Rubiq Solutions Pvt Ltd',
+    company_name: 'Rubiq Solutions Pvt. Ltd.',
     icon: rubiq,
     iconBg: '#ffffff',
     date: 'Mar 2020 - Jul 2021',
   },
   {
     title: 'Software Engineer Intern',
-    company_name: 'Rubiq Solutions Pvt Ltd',
+    company_name: 'Rubiq Solutions Pvt. Ltd.',
     icon: rubiq,
     iconBg: '#ffffff',
     date: 'Sept 2019 - Feb 2020',
   },
   {
     title: 'Software Engineer Intern',
-    company_name: 'Kabera Global Technologies Pvt Ltd',
+    company_name: 'Kabera Global Technologies Pvt. Ltd.',
     icon: kabera,
     iconBg: '#333333',
     date: 'May 2019 - Aug 2019',
