@@ -147,13 +147,6 @@ const experiences = [
     date: 'Apr 2024 - Present',
   },
   {
-    title: 'Software Developer Intern',
-    company_name: 'Indemand Care Healthy Inc.',
-    icon: indemand,
-    iconBg: '#ffffff',
-    date: 'Aug 2023 - Dec 2023',
-  },
-  {
     title: 'Master of Science in Applied Computer Science',
     company_name: 'Concordia University',
     icon: concordia,
