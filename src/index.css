@@ -37,6 +37,22 @@
   color-scheme: dark;
 }
 
+.transition-all {
+  transition: all 300ms ease-in-out;
+}
+.opacity-100 {
+  opacity: 1;
+}
+.opacity-0 {
+  opacity: 0;
+}
+.visible {
+  visibility: visible;
+}
+.invisible {
+  visibility: hidden;
+}
+
 .nav-links::after {
   content: '';
   display: block;
