@@ -10,7 +10,7 @@ import {
   git,
   docker,
   postgresql,
-  indemand,
+  digirovers,
   concordia,
   rubiq,
   kabera,
@@ -28,6 +28,7 @@ import {
   plagiarism,
   facemask,
   college,
+  kafka_clone,
   mifi,
 } from '../assets';
 
@@ -140,6 +141,13 @@ const technologies = [
 
 const experiences = [
   {
+    title: 'Software Engineer',
+    company_name: 'DigiRovers Solutions Pvt. Ltd.',
+    icon: digirovers,
+    iconBg: '#ffffff',
+    date: 'May 2023 - Present',
+  },
+  {
     title: 'Études de langue française',
     company_name: 'Ministère de l\'Immigration, de la Francisation et de l\'Intégration',
     icon: mifi,
@@ -154,14 +162,14 @@ const experiences = [
     date: 'Sept 2021 - Aug 2023',
   },
   {
-    title: 'Software Engineer',
+    title: 'Software Developer',
     company_name: 'Rubiq Solutions Pvt. Ltd.',
     icon: rubiq,
     iconBg: '#ffffff',
     date: 'Mar 2020 - Jul 2021',
   },
   {
-    title: 'Software Engineer Intern',
+    title: 'Software Developer Intern',
     company_name: 'Rubiq Solutions Pvt. Ltd.',
     icon: rubiq,
     iconBg: '#ffffff',
@@ -279,9 +287,9 @@ const projects = [
   },
   {
     id: 'project-5',
-    name: 'Portfolio',
+    name: 'Kafka Clone',
     description:
-      'A dynamic and visually engaging developer portfolio showcasing my skills, projects, and experience.',
+      'A lightweight Kafka-inspired message broker handling API requests, message publishing, and retrieval.',
     tags: [
       {
         name: 'nextjs',
@@ -296,10 +304,11 @@ const projects = [
         color: 'pink-text-gradient',
       },
     ],
-    image: portfolio,
-    repo: 'https://github.com/abhimittal1311/portfolio.git',
-    demo: 'https://abhimittal1311.github.io/portfolio/',
+    image: kafka_clone,
+    repo: 'https://github.com/abhimittal1311/kafka-clone.git',
+    demo: '',
   },
+  
 ];
 
 export { services, technologies, experiences, projects };

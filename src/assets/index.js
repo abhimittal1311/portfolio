@@ -38,8 +38,8 @@ import nodejs from './tech/nodejs.png';
 import reactjs from './tech/reactjs.png';
 import postgresql from './tech/postgresql.png';
 
+import digirovers from './company/digirovers_logo.png';
 import mifi from './company/mifi.png';
-import indemand from './company/indemand_logo.png';
 import concordia from './company/concordia_logo.png';
 import rubiq from './company/rubiq_logo.png';
 import kabera from './company/kabera_logo.png';
@@ -54,6 +54,7 @@ import facemask from './projects/facemask.png';
 import plagiarism from './projects/plagiarism.png';
 import portfolio from './projects/portfolio.png';
 import connects from './projects/connects.png';
+import kafka_clone from './projects/kafka.png';
 
 export {
   bwmap,
@@ -91,7 +92,7 @@ export {
   springboot,
   rest,
   concordia,
-  indemand,
+  digirovers,
   rubiq,
   kabera,
   chitkara,
@@ -101,6 +102,7 @@ export {
   linkedin,
   connects,
   portfolio,
+  kafka_clone,
   plagiarism,
   facemask,
   college,
