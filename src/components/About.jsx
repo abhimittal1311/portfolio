@@ -39,7 +39,7 @@ const About = () => {
 
       <motion.p
         variants={fadeIn('', '', 0.1, 1)}
-        className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
+        className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px] text-justify">
         Since 2019, I’ve been on a mission to turn complex challenges into elegant, 
         efficient, and delightfully user-friendly solutions. When I’m not coding, 
         you’ll probably find me perfecting a new recipe in the kitchen, conquering 

@@ -179,7 +179,7 @@ const Projects = () => {
       <div className="w-full flex">
         <motion.p
           variants={fadeIn('', '', 0.1, 1)}
-          className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]"
+          className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px] text-justify"
         >
           Here's a collection of my digital playgrounds, where I've solved puzzles,
           wrangled code, and built cool stuff! Each project comes with a little backstory,

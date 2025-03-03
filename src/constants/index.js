@@ -13,6 +13,7 @@ import {
   digirovers,
   concordia,
   rubiq,
+  rubiq2,
   kabera,
   chitkara,
   java,
@@ -145,7 +146,14 @@ const experiences = [
     company_name: 'DigiRovers Solutions Pvt. Ltd.',
     icon: digirovers,
     iconBg: '#ffffff',
-    date: 'May 2023 - Present',
+    date: 'Jan 2024 - Present',
+  },
+  {
+    title: 'Software Engineer Intern',
+    company_name: 'DigiRovers Solutions Pvt. Ltd.',
+    icon: digirovers,
+    iconBg: '#ffffff',
+    date: 'May 2023 - Dec 2023',
   },
   {
     title: 'Études de langue française',
@@ -166,14 +174,14 @@ const experiences = [
     company_name: 'Rubiq Solutions Pvt. Ltd.',
     icon: rubiq,
     iconBg: '#ffffff',
-    date: 'Mar 2020 - Jul 2021',
+    date: 'Aug 2020 - Jul 2021',
   },
   {
     title: 'Software Developer Intern',
     company_name: 'Rubiq Solutions Pvt. Ltd.',
-    icon: rubiq,
-    iconBg: '#ffffff',
-    date: 'Sept 2019 - Feb 2020',
+    icon: rubiq2,
+    iconBg: '#333333',
+    date: 'Sept 2019 - Jul 2020',
   },
   {
     title: 'Software Engineer Intern',
@@ -200,15 +208,15 @@ const projects = [
       'A program that detects if two source codes or text files are plagiarised.',
     tags: [
       {
-        name: 'react',
+        name: 'java',
         color: 'blue-text-gradient',
       },
       {
-        name: 'restapi',
+        name: 'dynamic-programming',
         color: 'green-text-gradient',
       },
       {
-        name: 'scss',
+        name: 'eclipse',
         color: 'pink-text-gradient',
       },
     ],
@@ -223,15 +231,15 @@ const projects = [
     description: 'A career services platform that allows users to browse through and apply to job postings.',
     tags: [
       {
-        name: 'react',
+        name: 'java',
         color: 'blue-text-gradient',
       },
       {
-        name: 'mongodb',
+        name: 'react',
         color: 'green-text-gradient',
       },
       {
-        name: 'tailwind',
+        name: 'springboot',
         color: 'pink-text-gradient',
       },
     ],
@@ -247,15 +255,15 @@ const projects = [
     description: 'An AI model trained to detect if a person is wearing a face mask, are they wearing it correctly, and what type of mask are they wearing.',
     tags: [
       {
-        name: 'nextjs',
+        name: 'python',
         color: 'blue-text-gradient',
       },
       {
-        name: 'supabase',
+        name: 'tensorflow',
         color: 'green-text-gradient',
       },
       {
-        name: 'css',
+        name: 'cnn',
         color: 'pink-text-gradient',
       },
     ],
@@ -269,15 +277,15 @@ const projects = [
     description: `A WebApp that allows students to submit a variety of applications like admissions and leaves, and allows teachers to review applications and submit responses.`,
     tags: [
       {
-        name: 'nextjs',
+        name: 'java',
         color: 'blue-text-gradient',
       },
       {
-        name: 'supabase',
+        name: 'mysql',
         color: 'green-text-gradient',
       },
       {
-        name: 'css',
+        name: 'bootstrap',
         color: 'pink-text-gradient',
       },
     ],
@@ -292,15 +300,15 @@ const projects = [
       'A lightweight Kafka-inspired message broker handling API requests, message publishing, and retrieval.',
     tags: [
       {
-        name: 'nextjs',
+        name: 'java',
         color: 'blue-text-gradient',
       },
       {
-        name: 'supabase',
+        name: 'tcp',
         color: 'green-text-gradient',
       },
       {
-        name: 'css',
+        name: 'bytebuffer',
         color: 'pink-text-gradient',
       },
     ],

@@ -44,6 +44,7 @@ import concordia from './company/concordia_logo.png';
 import rubiq from './company/rubiq_logo.png';
 import kabera from './company/kabera_logo.png';
 import chitkara from './company/chitkara_logo.png';
+import rubiq2 from './company/rubiq_logo_blk.png';
 
 import githubW from './social/github.png';
 import linkedin from './social/linkedin.png';
@@ -94,6 +95,7 @@ export {
   concordia,
   digirovers,
   rubiq,
+  rubiq2,
   kabera,
   chitkara,
   resumeDoc,
