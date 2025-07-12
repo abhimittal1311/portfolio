@@ -45,6 +45,7 @@ import rubiq from './company/rubiq_logo.png';
 import kabera from './company/kabera_logo.png';
 import chitkara from './company/chitkara_logo.png';
 import rubiq2 from './company/rubiq_logo_blk.png';
+import procom from './company/procom_logo.png';
 
 import githubW from './social/github.png';
 import linkedin from './social/linkedin.png';
@@ -109,4 +110,5 @@ export {
   facemask,
   college,
   mifi,
+  procom,
 };

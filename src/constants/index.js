@@ -31,6 +31,7 @@ import {
   college,
   kafka_clone,
   mifi,
+  procom,
 } from '../assets';
 
 export const navLinks = [
@@ -142,11 +143,18 @@ const technologies = [
 
 const experiences = [
   {
+    title: 'Java Backend Developer 2',
+    company_name: 'Procom',
+    icon: procom,
+    iconBg: '#ffffff',
+    date: 'June 2025 - Present',
+  },
+  {
     title: 'Software Engineer',
     company_name: 'DigiRovers Solutions Pvt. Ltd.',
     icon: digirovers,
     iconBg: '#ffffff',
-    date: 'Jan 2024 - Present',
+    date: 'Jan 2024 - June 2025',
   },
   {
     title: 'Software Engineer Intern',
@@ -160,7 +168,7 @@ const experiences = [
     company_name: 'Ministère de l\'Immigration, de la Francisation et de l\'Intégration',
     icon: mifi,
     iconBg: '#ffffff',
-    date: 'Apr 2024 - Present',
+    date: 'Apr 2024 - Apr 2025',
   },
   {
     title: 'Master of Science in Applied Computer Science',
